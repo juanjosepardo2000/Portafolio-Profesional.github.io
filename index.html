@@ -22,6 +22,10 @@
   <div class="main-container">
     <!-- ===== Aside Start ===== -->
     <div class="aside">
+      <!-- 
+      This section contains the logo of the portfolio website.
+      The logo is wrapped inside a div with the class "logo".
+      -->
       <div class="logo">
         <a href="#"><span></span>Juan José</a>
       </div>
@@ -233,7 +237,7 @@
                               <h4 class="timeline-title">Proyectos Independientes</h4>
                               <h5 class="timeline-subtitle">Ingeniero en telecomunicaicones</h5>
                               <ul class="timeline-text"></ul>
-                              <li>Desarrollo de un asistente virtual con IA para consultas estudiantiles, utilizando APIs diseñadas en Python (Flask/FastAPI)</li>                               <li>Soporte TI a los equipos informáticos de cada departamento</li>
+                              <li>Desarrollo de un asistente virtual con IA para consultas estudiantiles, utilizando APIs diseñadas en Python (Flask/FastAPI)</li>                              
                               <li>Diseño de software Backend para recolección de datos de sensores medicos para una red de internet de las cosas médicas. </li>
                               <li>Desarrollo de portafolios web con diseños modernos y optimizados para la presentación de proyectos y perfiles profesionales. </li>
                               <li>Desarrollo de un sistema de monitoreo remoto de la salud de adultos mayores, utilizando sensores y tecnologías de comunicación avanzadas.</li>
@@ -373,78 +377,69 @@
         </div>
       </section>
       <!-- ===== Services Section End ===== -->
-      <!-- ===== Portfolio Section Start ===== -->
-      <section class="portfolio section" id="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Portfolio</h2>
-            </div>
+<!-- ===== Portfolio Section Start ===== -->
+<section class="portfolio section" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="section-title padd-15">
+        <h2>Portafolio</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="portfolio-heading padd-15">
+        
+      </div>
+    </div>
+    <div class="row">
+      <!-- ====== Portfolio Items Start ====== -->
+      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto1')">
+        <div class="portfolio-item-inner shadow-dark">
+          <div class="portfolio-img">
+            
           </div>
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>My Last Projects :</h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- ====== portfolio item start ====== -->
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-1.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-             <!-- ====== portfolio item start ====== -->
-             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-2.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-             <!-- ====== portfolio item start ====== -->
-             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-3.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-             <!-- ====== portfolio item start ====== -->
-             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-4.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-             <!-- ====== portfolio item start ====== -->
-             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-5.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-             <!-- ====== portfolio item start ====== -->
-             <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-6.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!-- ====== portfolio item End ====== -->
-          </div>
+          <h3>YouLuimere, una plataforma IoMt</h3>
+          <img class="project-thumbnail" src="images/iomt.jpg" alt="Miniatura">
         </div>
-      </section>
-      <!-- ===== Portfolio Section End ===== -->
+      </div>
+      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto2')">
+        <div class="portfolio-item-inner shadow-dark">
+          <div class="portfolio-img">
+          </div>
+          <h3>Aplicación de Gestión de Transporte</h3>
+          <img class="project-thumbnail" src="images/proyecto2.jpg" alt="Miniatura">
+        </div>
+      </div>
+      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto3')">
+        <div class="portfolio-item-inner shadow-dark">
+          <div class="portfolio-img">
+            <img src="images/portfolio/proyecto3.jpg" alt="">
+          </div>
+          <h3>Asistente Virtual con IA</h3>
+          <img class="project-thumbnail" src="images/proyecto3.jpg" alt="Miniatura">
+        </div>
+      </div>
+      <!-- ====== Portfolio Items End ====== -->
+    </div>
+    <!-- ===== Project Details Section Start ===== -->
+    <!-- ==                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        === Project Details Section Start ===== -->
+    <div class="row">
+      <div class="project-details padd-15" id="project-details">
+        <h3 id="project-title">Título del Proyecto</h3>
+        <img id="project-thumbnail" src="images/" alt="Miniatura del Proyecto">
+        <p id="project-description">Descripción del Proyecto</p>
+        <div id="project-architecture">
+          <!-- Aquí se cargará dinámicamente la arquitectura del sistema -->
+        </div>
+        <video id="project-video" controls>
+          <source src="" type="video/mp4">
+        </video>
+        <p id="project-additional-description">Descripción adicional del proyecto</p>
+      </div>
+    </div>
+</section>
+<!-- ===== Portfolio Section End ===== -->
+
+      
       <!-- ===== Contact Section Start ===== -->
       <section class="contact section" id="contact">
         <div class="container">
@@ -554,3 +549,4 @@
   <script src="js/style-switcher.js"></script>
 </body>
 </html>
+

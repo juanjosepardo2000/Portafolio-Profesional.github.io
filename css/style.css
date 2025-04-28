@@ -836,3 +836,232 @@ h3.my-profession
         max-width: 100%;
     }
 }
+/* ===== Estilos para la sección de Proyectos ===== */
+#project-details {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--bg-black-100);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(48, 46, 77, 0.2);
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#project-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text-black-900);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#project-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--skin-color);
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+#project-thumbnail {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#project-description {
+    font-size: 18px;
+    color: var(--text-black-700);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#project-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#project-video {
+    max-width: 90%;
+    border-radius: 15px;
+    display: none;
+}
+
+.portfolio-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 80px;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 8px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(48, 46, 77, 0.25);
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    border: 2px solid var(--skin-color);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--skin-color);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .portfolio-item h3,
+body.dark-mode .portfolio-heading h2,
+body.dark-mode .section-title h2 {
+  color: #ffffff; /* Cambia el color del texto a blanco */
+}
+
+body.dark-mode .project-details h3,
+body.dark-mode .project-details p {
+  color: #ffffff; /* Cambia el color de los detalles del proyecto */
+}
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .portfolio-item {
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+      margin-bottom: 20px;
+    }
+  }
+
+
+/* Centrar el video */
+.project-details video {
+    display: block;
+    margin: 20px auto; /* Centra el video horizontalmente */
+    max-width: 100%; /* Asegura que el video no exceda el ancho del contenedor */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+  }
+  
+  /* Estilo general para los títulos */
+.project-details h3, 
+.project-details h4, 
+.project-details h5 {
+    font-family: 'Poppins', sans-serif; /* Tipo de letra principal */
+    font-weight: 700; /* Negrita para los títulos */
+    font-size: 24px; /* Tamaño de letra para los títulos */
+    color: var(--text-black-900); /* Color principal para los títulos */
+    text-align: center; /* Centrar los títulos */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilo general para el texto */
+.project-details p, 
+.project-details ul, 
+.project-details ol {
+    font-family: 'Poppins', sans-serif; /* Tipo de letra principal */
+    font-weight: 400; /* Peso normal para el texto */
+    font-size: 16px; /* Tamaño de letra para el texto */
+    color: var(--text-black-700); /* Color principal para el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: justify; /* Justificar el texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Ajuste para listas */
+.project-details ul, 
+.project-details ol {
+    margin-left: 20px; /* Margen izquierdo para listas */
+    padding-left: 20px; /* Relleno izquierdo para listas */
+}
+
+/* Estilo para los videos */
+.project-details video {
+    display: block;
+    margin: 20px auto; /* Centrar el video horizontalmente */
+    max-width: 100%; /* Asegurar que el video no exceda el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para las imágenes */
+.project-details img {
+    display: block;
+    margin: 20px auto; /* Centrar las imágenes horizontalmente */
+    max-width: 100%; /* Asegurar que las imágenes no excedan el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+/* Estilo para los subtítulos dentro de .project-details */
+.project-details h5 {
+    font-family: 'Poppins', sans-serif; /* Tipo de letra principal */
+    font-weight: 600; /* Peso medio para el subtítulo */
+    font-size: 18px; /* Tamaño de letra más pequeño */
+    color: var(--text-black-900); /* Color del texto */
+    text-align: left; /* Alineado al lado izquierdo */
+    margin-bottom: 10px; /* Espaciado inferior */
+ padding: 10px; /* Relleno interno */
+    position: relative; /* Necesario para los pseudo-elementos */
+    display: inline-block; /* Asegura que el tamaño del subtítulo sea ajustado */
+}
+/* Estilo para h6 dentro de .project-details */
+.project-details h6 {
+    font-family: 'Poppins', sans-serif; /* Tipo de letra principal */
+    font-weight: 600; /* Peso medio */
+    font-size: 16px; /* Tamaño de letra más grande */
+    color: var(--text-black-900); /* Color del texto */
+    text-align: left; /* Alineado al lado izquierdo */
+    margin-bottom: 10px; /* Espaciado inferior */
+    padding: 0; /* Sin relleno adicional */
+}
+
+
+/* Detalles de recuadro en las esquinas */
+.project-details h5::before, 
+.project-details h5::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid var(--skin-color); /* Color del borde */
+}
+
+.project-details h5::before {
+    top: 0;
+    left: 0;
+    border-right: none; /* Solo borde superior e izquierdo */
+    border-bottom: none;
+}
+
+.project-details h5::after {
+    bottom: 0;
+    right: 0;
+    border-left: none; /* Solo borde inferior y derecho */
+    border-top: none;
+}
+
+
+.project-details img,
+.project-details video {
+    max-width: 100%; /* Asegura que ambos se ajusten al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen y el video */
+    border-radius: 10px; /* Bordes redondeados para consistencia */
+}

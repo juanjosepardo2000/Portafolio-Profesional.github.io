@@ -42,3 +42,9 @@ window.addEventListener("load", () => {
         dayNight.querySelector("i").classList.add("fa-moon");
     }
 })
+
+const darkModeToggle = document.querySelector(".day-night");
+
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});

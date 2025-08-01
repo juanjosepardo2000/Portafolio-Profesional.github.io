@@ -424,36 +424,61 @@
         
       </div>
     </div>
+<div class="row">
+  <div class="portfolio-filter padd-15">
+    <button type="button" class="filter-item" data-filter="iot"> Hardware and Software Developer</button>
+    <button type="button" class="filter-item" data-filter="ai"> Data Scientist</button>
+    <button type="button" class="filter-item" data-filter="web">Telecomnications Engineer</button>
+        <button type="button" class="filter-item active" data-filter="all">Todos mis proyecto</button>
+   </div>
+</div>
+
     <div class="row">
-      <!-- ====== Portfolio Items Start ====== -->
-      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto1')">
-        <div class="portfolio-item-inner shadow-dark">
-          <div class="portfolio-img">
-            
-          </div>
-          <h3>YouLuimere, una plataforma de internet de las cosas médicas</h3>
-          <img class="project-thumbnail" src="images/iomt.jpg" alt="Miniatura">
-        </div>
+  <!-- ====== Portfolio Items Start ====== -->
+  <div class="portfolio-item padd-15 iot" data-category="iot" onclick="showProjectDetails('proyecto1')">
+    <div class="portfolio-item-inner shadow-dark">
+      <div class="portfolio-img">
+        
       </div>
-      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto2')">
-        <div class="portfolio-item-inner shadow-dark">
-          <div class="portfolio-img">
-          </div>
-          <h3>Asistente virtual-Mapa interactivo</h3>
-          <img class="project-thumbnail" src="images/asistente virtual.png" alt="Miniatura">
-        </div>
-      </div>
-      <div class="portfolio-item padd-15" onclick="showProjectDetails('proyecto3')">
-        <div class="portfolio-item-inner shadow-dark">
-          <div class="portfolio-img">
-            <img src="images/portfolio/proyecto3.jpg" alt="">
-          </div>
-          <h3>Asistente Virtual con IA</h3>
-          <img class="project-thumbnail" src="images/proyecto3.jpg" alt="Miniatura">
-        </div>
-      </div>
-      <!-- ====== Portfolio Items End ====== -->
+      <h3>YouLuimere, una plataforma de internet de las cosas médicas</h3>
+      <img class="project-thumbnail" src="images/iomt.jpg" alt="Miniatura">
     </div>
+  </div>
+  <div class="portfolio-item padd-15 ai" data-category="ai" onclick="showProjectDetails('proyecto2')">
+    <div class="portfolio-item-inner shadow-dark">
+      <div class="portfolio-img">
+      </div>
+      <h3>Asistente virtual-Mapa interactivo</h3>
+      <img class="project-thumbnail" src="images/asistente virtual.png" alt="Miniatura">
+    </div>
+  </div>
+  <div class="portfolio-item padd-15 ai" data-category="ai" onclick="showProjectDetails('proyecto3')">
+    <div class="portfolio-item-inner shadow-dark">
+      <div class="portfolio-img">
+        <img src="images/portfolio/proyecto3.jpg" alt="">
+      </div>
+      <h3>Asistente Virtual con IA</h3>
+      <img class="project-thumbnail" src="images/proyecto3.jpg" alt="Miniatura">
+    </div>
+  </div>
+
+  <!-- MODULO DE AGENDAMIENTO DE CITAS MEDICASO -->
+  <div class="portfolio-item padd-15 iot" data-category="iot" onclick="showProjectDetails('proyecto4')">
+    <div class="portfolio-item-inner shadow-dark">
+      <div class="images/minthy/agendamiento_minthy_project/principal_agendamiento.jpg">
+        
+      </div>
+      <h3>Módulo de agendamiento de citas médicas</h3>
+      <img class="project-thumbnail" src="images/minthy/agendamiento_minthy_project/principal_agendamiento.jpg" alt="Miniatura">
+    </div>
+  </div>
+
+
+
+
+  <!-- ====== Portfolio Items End ====== -->
+</div>
+
     <!-- ===== Project Details Section Start ===== -->
     <!-- ==                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        === Project Details Section Start ===== -->
     <div class="row">
@@ -491,6 +516,7 @@
               <h4>Celular / WhatsApp</h4>
               <p>+593 985883283</p>
             </div>
+
             <!-- ===== Contact info item end ====== -->
              <!-- ===== Contact info item start ====== -->
              <div class="contact-info-item padd-15">

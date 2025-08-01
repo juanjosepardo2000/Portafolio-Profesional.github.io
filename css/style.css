@@ -916,6 +916,53 @@ h3.my-profession
     box-shadow: 0 0 18px rgba(48, 46, 77, 0.25);
 }
 
+/* ===== Portfolio Filter Styles ===== */
+.portfolio-filter {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio-filter .filter-item {
+  background: var(--bg-black-100);
+  color: var(--text-black-700);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 0 5px 10px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter .filter-item.active {
+  background: var(--skin-color);
+  color: #ffffff;
+}
+
+.portfolio-filter .filter-item:hover {
+  background: var(--skin-color);
+  color: #ffffff;
+}
+
+/* Portfolio item animations */
+.portfolio-item {
+  transition: all 0.3s ease;
+}
+
+.portfolio-item.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.portfolio-item.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .btn {
     font-size: 16px;
     font-weight: 500;

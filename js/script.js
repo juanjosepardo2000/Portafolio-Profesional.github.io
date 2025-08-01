@@ -362,7 +362,108 @@ const nav = document.querySelector(".nav"),
                   additionalDescription: `
                   <p>Desarrollado con Python y frameworks como Flask/FastAPI.</p>
                   `
+                },
+
+                proyecto4: {
+                  title: "Módulo Técnico: Agendamiento de citas médicas 🩺",
+                  thumbnail: "images/minthy/agendamiento_minthy_project/principal_agendamiento.jpg", 
+                  description: `
+                  <p>Este módulo permite al usuario agendar citas médicas con profesionales disponibles según especialidad, fecha y modalidad (presencial o videollamada). Está diseñado para funcionar de manera responsiva 
+                  desde cualquier dispositivo móvil, con experiencia fluida y rápida confirmación..</p>
+                  `,
+                  video: "videos/proyecto4.mp4",
+                  additionalDescription: `
+                  <p>. 
+                  <section style="font-family: 'Segoe UI', sans-serif; background-color: #f5f7fa; color: #333; padding: 20px; max-width: 1200px; margin: auto;">
+                    
+                    <p>
+                    </p>
+                    <h2 style="color:#2c3e50; text-align: center;">🧭 Flujo de funcionamiento</h2>
+                    <ol>
+                      <li>Selección de especialidad</li>
+                      <li>Búsqueda de médicos disponibles</li>
+                      <li>Selección de fecha y hora según disponibilidad</li>
+                      <li>Confirmación con notificación automática</li>
+                      <li>Registro en el historial de reservas del paciente y el médico</li>
+                    </ol>
+            
+                    <div class="image-container">
+                    <img src="images/minthy/agendamiento_minthy_project/diagrama_de_flujo_agendamiento.png" alt="Modulo teleconsulta" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    </div>
+
+                    <h2 style="color:#2c3e50; text-align: center;">🧰 Tecnologías utilizadas</h2>
+
+
+                    <h1 style="color:#34495e;">🔧 Interfaz: Ionic 7 + Angular 16</h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/minthy/agendamiento_minthy_project/ionic_angular_agendamiento_project.png" alt="Ionic Angular" style="max-width:20%; border-radius:10px;">
+                    </div>
+                    <ul>
+                      <li>Interfaz híbrida multiplataforma</li>
+                      <li>Componentes reutilizables con Angular Material</li>
+                      <li>Enrutamiento basado en roles (paciente / médico)</li>
+                    </ul>
+
+                    <h1 style="color:#34495e;">🎨 Interfaz de usuario / experiencia de usuario</h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/minthy/agendamiento_minthy_project/ui_ux_agendamiento.jpg" alt="UI/UX" style="max-width:20%; border-radius:10px;">
+                    </div>
+                    <ul>
+                      <li>Formularios reactivos (ReactiveFormsModule) para validación en tiempo real</li>
+                      <li>Angular Material Datepicker para selección de fechas</li>
+                      <li>Ngx-Toastr para retroalimentación inmediata</li>
+                    </ul>
+
+                    <h1 style="color:#34495e;">🔐 Autenticación: Firebase Authentication</h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/minthy/agendamiento_minthy_project/auth_firebase_agendamiento_project.png" alt="Firebase Auth" style="max-width:20%; border-radius:10px;">
+                    </div>
+                    <ul>
+                      <li>Inicio de sesión con correo electrónico</li>
+                      <li>Almacenamiento seguro de tokens</li>
+                      <li>Validación del rol del usuario para mostrar solo opciones relevantes</li>
+                    </ul>
+
+                    <h1 style="color:#34495e;">📂 Base de datos: Firestore</h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/minthy/agendamiento_minthy_project/firebase_database.png" alt="Firestore" style="max-width:20%; border-radius:10px;">
+                    </div>
+                    <ul>
+                      <li>Estructura SQL organizada por colecciones</li>
+                      <li>Consultas en tiempo real con <code>snapshotChanges()</code></li>
+                    </ul>
+
+                    <h1 style="color:#34495e;">📨 Notificaciones</h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/minthy/agendamiento_minthy_project/notificacion_agendamiento.jpg" alt="Notificaciones" style="max-width:20%; border-radius:10px;">
+                    </div>
+                    <ul>
+                      <li>Uso de Firebase Cloud Messaging (FCM) (en pruebas)</li>
+                      <li>Envío de confirmación de cita al paciente y recordatorio 24h antes</li>
+                      <li>Opcional: integración con EmailJS para notificaciones por correo</li>
+                    </ul>
+
+                    <h1 style="color:#2c3e50;">⚙️ Funcionalidades técnicas destacadas</h1>
+                    <ul>
+                      <li><strong>Control de disponibilidad médica:</strong> los médicos pueden establecer sus horarios y días disponibles. El sistema bloquea automáticamente los espacios ya reservados para evitar conflictos.</li>
+                      <li><strong>Agendamiento dinámico en tiempo real:</strong> uso de Firestore con oyentes activos (valueChanges(), snapshotChanges()) para actualizar la disponibilidad al instante.</li>
+                      <li><strong>Integración con el módulo de videollamadas:</strong> si la cita es virtual, se genera un enlace único y se adjunta al momento de la confirmación.</li>
+                      <li><strong>Gestión de conflictos:</strong> validación en el backend que impide agendar dos citas para el mismo médico o paciente en horarios traslapados.</li>
+                      <li><strong>Experiencia centrada en el usuario:</strong>
+                        <ul>
+                          <li>- Animaciones con Ionic Animations API para transiciones suaves</li>
+                          <li>- Indicadores visuales de carga (ngx-spinner, mat-progress-bar)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                                
+                    <h2 style="color:#2c3e50; text-align: center;">📱 Vista previa de la aplicación</h2>                  
+                    
+                  
+                  </p>
+                  `
                 }
+                
                 };
             
               // Obtener los detalles del proyecto seleccionado
@@ -388,3 +489,37 @@ const nav = document.querySelector(".nav"),
                 `;
               }
             }
+
+/* ============================== Portfolio Filter ============================ */
+const filterButtons = document.querySelectorAll('.filter-item');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remover clase active de todos los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar clase active al botón clickeado
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        portfolioItems.forEach(item => {
+            if (filterValue === 'all') {
+                item.style.display = 'block';
+                item.classList.add('show');
+                item.classList.remove('hide');
+            } else {
+                if (item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block';
+                    item.classList.add('show');
+                    item.classList.remove('hide');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.add('hide');
+                    item.classList.remove('show');
+                }
+            }
+        });
+    });
+});
+

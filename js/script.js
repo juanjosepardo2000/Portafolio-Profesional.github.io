@@ -462,8 +462,87 @@ const nav = document.querySelector(".nav"),
                   
                   </p>
                   `
-                }
-                
+                },
+
+                proyecto5: {
+                  title: "Automatización y Web Scraping para extracción de transacciones en el transporte urbano de Loja",
+                  thumbnail: "images/webscraping/webscraping.png",
+                  description: `
+                  <p>Este proyecto fue desarrollado para optimizar el proceso de fiscalización del uso de tarjetas electrónicas en el sistema de transporte urbano de Loja.
+                   Anteriormente, la recolección de transacciones debía hacerse manualmente, descargando una a una las hojas diarias desde el sistema KBus, lo que consumía mucho tiempo y recursos.
+                  Mediante el uso de Python y técnicas de web scraping, se automatiza por completo la extracción de transacciones diarias durante un mes completo. El sistema inicia sesión en la plataforma, 
+                  consulta los datos día por día, gestiona la paginación de resultados y genera automáticamente un archivo Excel limpio y formateado con toda la información necesaria para ser analizada.</p>
+                    
+                  `,
+                  
+                  additionalDescription: `
+
+                  <h3 style="color:#2c3e50;"> Diagrama de flujo </h3>
+                    <div style="text-align:center; margin: 20px 0;">
+                      <img src="images/webscraping/flujograma.png" alt="Diagrama de flujo Web Scraping" style="max-width:80%; border-radius:10px;">
+                    </div>
+                  <p>El proceso inicia con una autenticación mediante sesión persistente, estableciendo conexión con la plataforma KBus a través de credenciales válidas. 
+                  Posteriormente, el script registra un rango de fechas (por ejemplo, todo el mes de octubre), y para cada día envía solicitudes con filtros personalizados 
+                  que permiten recuperar todas las transacciones realizadas. Para asegurar la cobertura total de los datos, se implementa un sistema de paginación automática que 
+                  registra cada página de resultados hasta completarlas. Las transacciones recolectadas se almacenan temporalmente en memoria para luego ser convertidas en un DataFrame 
+                  utilizando la librería Pandas, donde se realiza la limpieza y renombrado de columnas según el formato requerido para la fiscalización. Finalmente, se genera un archivo Excel profesional, 
+                  con estilos aplicados a encabezados, formatos de moneda y fechas, facilitando su integración con hojas de cálculo preexistentes que contienen macros para el análisis de uso indebido de tarjetas. 
+                  Esta arquitectura garantiza una extracción de datos confiable, escalable y lista para su análisis mensual.<p>
+                  
+                  <h3 style="color:#2c3e50;"> Video demostrativo </h3>
+                  <p>El video a continuación muestra cómo el sistema inicia sesión en el portal de KBus, extrae todas las transacciones, las procesa y genera el Excel final automáticamente.</p>
+                    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                      <div class="video-container" style="max-width: 400px;">
+                        <video controls style="width: 100%; height: auto;">
+                          <source src="images/webscraping/video_webscraping.mp4" type="video/mp4">
+                          Tu navegador no soporta la etiqueta de video.
+                        </video>
+                      </div>
+                    </div>
+
+                  <h3>Tecnologías utilizadas</h3>
+                  <table style="width: 80%; max-width: 900px; margin: 0 auto; border-collapse: collapse; text-align: center;">
+                    <thead>
+                      <tr style="background-color: #2c3e50; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc;">Categoría</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Tecnología</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-code"></i> Lenguaje de programación</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Python</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-robot"></i> Librerías de automatización</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">requests, time</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-database"></i> Procesamiento de datos</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">pandas, datetime</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-file-export"></i> Exportación de reportes</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">openpyxl</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-file-excel"></i> Formato de archivos</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Excel (.xlsx)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-gears"></i> Técnicas utilizadas</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Web scraping, manejo de sesiones, paginación automática, exportación con estilo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+
+                  `
+                  
+                },
+
+
                 };
             
               // Obtener los detalles del proyecto seleccionado
@@ -472,7 +551,16 @@ const nav = document.querySelector(".nav"),
               if (project) {
                 // Actualizar los elementos del DOM con los detalles del proyecto
                 document.getElementById("project-title").textContent = project.title;
-                document.getElementById("project-thumbnail").src = project.thumbnail;
+                const thumbnailElement = document.getElementById("project-thumbnail");
+                thumbnailElement.src = project.thumbnail;
+                // Hacer el thumbnail más grande
+                thumbnailElement.style.width = "100%";
+                thumbnailElement.style.maxWidth = "200px";
+                thumbnailElement.style.height = "auto";
+                thumbnailElement.style.display = "block";
+                thumbnailElement.style.margin = "20px auto";
+                thumbnailElement.style.borderRadius = "10px";
+                thumbnailElement.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
                 document.getElementById("project-description").innerHTML = project.description; // Usar innerHTML
                 document.getElementById("project-architecture").innerHTML = project.architecture; // Usar innerHTML
                 document.getElementById("project-video").querySelector("source").src = project.video;

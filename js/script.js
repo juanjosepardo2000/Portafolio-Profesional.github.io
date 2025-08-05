@@ -115,8 +115,6 @@ const nav = document.querySelector(".nav"),
                   </div>
                   <p>Además del monitoreo de signos vitales, YouLumiere busca mejorar la calidad de vida de los pacientes mediante un asistente virtual basado en inteligencia artificial. Este asistente proporcionará acompañamiento a personas de la tercera edad que viven solas, brindándoles apoyo en su rutina diaria y facilitando la interacción con el sistema de monitoreo.</p>
                   <p>Gracias a su integración con la red de sensores, el asistente podrá ofrecer recordatorios personalizados sobre la toma de medicamentos, hábitos saludables y alertas médicas cuando detecte anomalías en los signos vitales. Asimismo, servirá como un compañero interactivo que fomentará el bienestar emocional de los pacientes.</p>
-                  `,
-                  architecture: `
                   <h3>Arquitectura del Sistema</h3>
                   <p>Desde un enfoque técnico, YouLumiere se basa en una arquitectura IoMT (Internet de las Cosas Médicas) compuesta por hardware y software, dividiéndose en los siguientes componentes clave: <p>
                   <ul>
@@ -344,9 +342,7 @@ const nav = document.querySelector(".nav"),
                   </ul>
                   `  
                  
-                  ,  
-                  architecture: `
-                  `
+              
                   ,
                   additionalDescription: `
                   `
@@ -491,6 +487,15 @@ const nav = document.querySelector(".nav"),
                   
                   <h3 style="color:#2c3e50;"> Video demostrativo </h3>
                   <p>El video a continuación muestra cómo el sistema inicia sesión en el portal de KBus, extrae todas las transacciones, las procesa y genera el Excel final automáticamente.</p>
+
+                  <div style="text-align: center;">
+                    <a href="https://youtu.be/TkPGdmKY57Q" target="_blank">
+                      <img src="images/webscraping/webscraping.png" alt="Ver video de Webscraping" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: 0.3s;">
+                    </a>
+                    <p style="font-weight: bold;">▶ Haz clic en la imagen para ver el video</p>
+                  </div>
+
+                  <!--
                     <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
                       <div class="video-container" style="max-width: 400px;">
                         <video controls style="width: 100%; height: auto;">
@@ -499,6 +504,7 @@ const nav = document.querySelector(".nav"),
                         </video>
                       </div>
                     </div>
+                    -->
 
                   <h3>Tecnologías utilizadas</h3>
                   <table style="width: 80%; max-width: 900px; margin: 0 auto; border-collapse: collapse; text-align: center;">
@@ -562,7 +568,12 @@ const nav = document.querySelector(".nav"),
                 thumbnailElement.style.borderRadius = "10px";
                 thumbnailElement.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
                 document.getElementById("project-description").innerHTML = project.description; // Usar innerHTML
-                document.getElementById("project-architecture").innerHTML = project.architecture; // Usar innerHTML
+                const architectureElement = document.getElementById("project-architecture");
+                  if (architectureElement && project.architecture) {
+                    architectureElement.innerHTML = project.architecture;
+                  } else if (architectureElement) {
+                    architectureElement.innerHTML = "";
+                  }
                 document.getElementById("project-video").querySelector("source").src = project.video;
                 document.getElementById("project-video").load(); // Recargar el video
                 document.getElementById("project-additional-description").innerHTML = project.additionalDescription; // Usar innerHTML
@@ -579,6 +590,7 @@ const nav = document.querySelector(".nav"),
             }
 
 /* ============================== Portfolio Filter ============================ */
+/* ============================== Portfolio Filter ============================ */
 const filterButtons = document.querySelectorAll('.filter-item');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -592,11 +604,21 @@ filterButtons.forEach(button => {
         const filterValue = button.getAttribute('data-filter');
         
         portfolioItems.forEach(item => {
+            const isSecondaryVersion = item.classList.contains('secondary-version');
+            
             if (filterValue === 'all') {
-                item.style.display = 'block';
-                item.classList.add('show');
-                item.classList.remove('hide');
+                // En "Todos", solo mostrar las versiones primarias (ocultar secundarias)
+                if (isSecondaryVersion) {
+                    item.style.display = 'none';
+                    item.classList.add('hide');
+                    item.classList.remove('show');
+                } else {
+                    item.style.display = 'block';
+                    item.classList.add('show');
+                    item.classList.remove('hide');
+                }
             } else {
+                // En filtros específicos, mostrar según la categoría
                 if (item.getAttribute('data-category') === filterValue) {
                     item.style.display = 'block';
                     item.classList.add('show');
@@ -610,4 +632,3 @@ filterButtons.forEach(button => {
         });
     });
 });
-

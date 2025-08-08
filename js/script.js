@@ -285,20 +285,56 @@ const nav = document.querySelector(".nav"),
                   
                 },
                 proyecto2: {
-                  title: "Asistente virtual-Mapa Interactivo",
+                  title: "Asistente Virtual - Mapa Interactivo",
                   thumbnail: "images/mapa/asistente virtual.png",
                   description: `
-                  <p>El Asistente Virtual UTPL es una herramienta innovadora creada para facilitar el acceso a información clave sobre movilidad estudiantil y
-                   convenios internacionales que ofrece la Universidad Técnica Particular de Loja (UTPL)</p>
-                   <div class="image-container">
-                    <img src="images/mapa/MAPA MUNDI.png" alt="MAPA MUNDI" style="max-width: 30%; height: auto; border-radius: 5px;">
-                  </div>
-                  <p>Este asistente está integrado a un mapa interactivo del mundo, donde los estudiantes pueden explorar los diferentes países y universidades con las que la UTPL tiene convenios. Al mismo tiempo, pueden hablar con el asistente usando su voz o escribiendo sus preguntas, y recibir respuestas rápidas, claras y actualizadas
-                   gracias a un sistema de inteligencia artificial conectado con la base de datos oficial de Global Campus UTPL.</p>
+                    <p>El <strong>Asistente Virtual UTPL</strong> es un sistema interactivo que integra inteligencia artificial, procesamiento de lenguaje natural (NLP) y visualización geográfica, con el objetivo de optimizar la consulta y exploración de información sobre <em>movilidad estudiantil</em> y <em>convenios internacionales</em> de la Universidad Técnica Particular de Loja (UTPL).</p>
+                    
+                    <div class="image-container">
+                      <img src="images/mapa/MAPA MUNDI.png" alt="MAPA MUNDI" style="max-width: 30%; height: auto; border-radius: 5px;">
+                    </div>
 
-                   <p>Está pensado para que cualquier estudiante, sin necesidad de conocimientos técnicos, pueda obtener información confiable sobre destinos, requisitos, fechas importantes, y procesos de postulación para vivir una experiencia internacional con la UTPL.<p>
-                      <!-- Contenedor principal en flex -->
-                      <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+                    <h3>Arquitectura y Funcionamiento</h3>
+                    <p>El sistema combina una interfaz gráfica interactiva (front-end) con un motor de búsqueda y respuesta (back-end) conectado a <strong>Firebase Firestore</strong>. El flujo básico de operación es:</p>
+                    <ol>
+                      <li>Captura de entrada por voz (Web Speech API) o texto (formulario).</li>
+                      <li>Procesamiento de la consulta usando modelos NLP para entender la intención.</li>
+                      <li>Búsqueda dinámica en la base de datos estructurada de <em>Global Campus UTPL</em>.</li>
+                      <li>Entrega de respuesta enriquecida con enlaces y recursos.</li>
+                      <li>Interacción visual: resalta en el mapa el país o universidad correspondiente.</li>
+                    </ol>
+
+                    <h3>Tecnologías Clave</h3>
+                    <table style="border-collapse: collapse; margin: auto; text-align: center;">
+                      <tr>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Componente</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Tecnología</th>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Interfaz Web</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">HTML5, CSS3, JavaScript</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Mapa Interactivo</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Mapbox GL JS (WebGL)</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Procesamiento de Lenguaje</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">NLP.js / OpenAI API</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Base de Datos</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Firebase Firestore</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Integración de Voz</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Web Speech API</td>
+                      </tr>
+                    </table>
+
+                    <h3>Ejemplos de Implementación</h3>
+                    <!-- Contenedor principal en flex -->
+                    <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
                       <div class="video-container" style="max-width: 200px;">
                         <video controls style="width: 100%; height: auto;">
                           <source src="images/mapa/Mapa funcionando.mp4" type="video/mp4">
@@ -311,11 +347,11 @@ const nav = document.querySelector(".nav"),
                           Tu navegador no soporta la etiqueta de video.
                         </video>
                       </div>
-                      <!-- Aquí CIERRA el contenedor flex de los videos -->
+                    </div>
 
-                  <p>Bajo el mismo modelo se han realizado otros asistentes virtuales integrados a un mapa como lo es en este caso un mapa del Ecuador que permite conocer sobre la cultura del país y hacer participe al usuario de trivias.</p>
-                  <!-- Contenedor principal en flex -->
-                      <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+                    <p>Además, el mismo framework se ha utilizado para crear versiones del asistente con mapas temáticos, como el <strong>Mapa Interactivo de Ecuador</strong>, que integra información cultural y trivias interactivas.</p>
+
+                    <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
                       <div class="video-container" style="max-width: 200px;">
                         <video controls style="width: 100%; height: auto;">
                           <source src="images/mapa/mapa ecuador .mp4" type="video/mp4">
@@ -329,25 +365,18 @@ const nav = document.querySelector(".nav"),
                         </video>
                       </div>
                     </div>
-                      <!-- Aquí CIERRA el contenedor flex de los videos -->
-                  <p>El Asistente Virtual UTPL es un sistema inteligente de consulta en lenguaje natural, potenciado por modelos de IA y herramientas de procesamiento de voz y texto, integrado a una interfaz visual basada en un mapa interactivo WebGL. Su objetivo es responder preguntas frecuentes sobre movilidad internacional 
-                  utilizando una base de conocimientos estructurada en Firebase Firestore, actualizada por el equipo de Global Campus UTPL. El sistema realiza las siguientes funciones 
-                  </p>
-                  <ul>
-                    <li>•	Escucha o interpreta texto escrito por el usuario.</li>
-                    <li>•	Procesa la consulta usando NLP (procesamiento de lenguaje natural).</li>
-                    <li>•	Realiza una búsqueda en tiempo real en la base de datos.</li>
-                    <li>•	Devuelve respuestas inmediatas con enlaces o recursos relevantes.</li>
-                    <li>•	Destaca el país o institución en el mapa si aplica.</li>
-                  </ul>
-                  `  
-                 
-              
-                  ,
-                  additionalDescription: `
-                  `
 
+                    <h3>Beneficios Clave</h3>
+                    <ul>
+                      <li>Acceso inmediato a información confiable y actualizada.</li>
+                      <li>Interacción natural con lenguaje humano.</li>
+                      <li>Experiencia visual inmersiva con mapas interactivos.</li>
+                      <li>Compatibilidad multiplataforma (navegadores modernos).</li>
+                    </ul>
+                  `,
+                  additionalDescription: ``
                 },
+
                 proyecto3: {
                   title: "Asistente Virtual con IA",
                   thumbnail: "images/proyecto3.jpg",
@@ -359,106 +388,77 @@ const nav = document.querySelector(".nav"),
                   <p>Desarrollado con Python y frameworks como Flask/FastAPI.</p>
                   `
                 },
-
                 proyecto4: {
-                  title: "Módulo Técnico: Agendamiento de citas médicas 🩺",
-                  thumbnail: "images/minthy/agendamiento_minthy_project/principal_agendamiento.jpg", 
-                  description: `
-                  <p>Este módulo permite al usuario agendar citas médicas con profesionales disponibles según especialidad, fecha y modalidad (presencial o videollamada). Está diseñado para funcionar de manera responsiva 
-                  desde cualquier dispositivo móvil, con experiencia fluida y rápida confirmación..</p>
-                  `,
-                  video: "videos/proyecto4.mp4",
-                  additionalDescription: `
-                  <p>. 
-                  <section style="font-family: 'Segoe UI', sans-serif; background-color: #f5f7fa; color: #333; padding: 20px; max-width: 1200px; margin: auto;">
-                    
-                    <p>
-                    </p>
-                    <h2 style="color:#2c3e50; text-align: center;">🧭 Flujo de funcionamiento</h2>
-                    <ol>
-                      <li>Selección de especialidad</li>
-                      <li>Búsqueda de médicos disponibles</li>
-                      <li>Selección de fecha y hora según disponibilidad</li>
-                      <li>Confirmación con notificación automática</li>
-                      <li>Registro en el historial de reservas del paciente y el médico</li>
-                    </ol>
-            
-                    <div class="image-container">
-                    <img src="images/minthy/agendamiento_minthy_project/diagrama_de_flujo_agendamiento.png" alt="Modulo teleconsulta" style="max-width: 100%; height: auto; border-radius: 5px;">
-                    </div>
+                    title: "Módulo Técnico: Agendamiento de Citas Médicas 🩺",
+                    thumbnail: "images/minthy/agendamiento_minthy_project/principal_agendamiento.jpg", 
+                    description: `
+                      <p>El <strong> Módulo de Agendamiento de Citas Médicas </strong> es un sistema interactivo y responsivo que forma
+                       parte de una plataforma de telemedicina que me encuentro desarrollando <strong> "Minthy" </strong> ,
+                      desarrollada para ofrecer atención médica eficiente y accesible. Este módulo está diseñado para facilitar 
+                      la programación de consultas médicas, optimizando la disponibilidad de los profesionales y mejorando la experiencia del 
+                      paciente. El usuario puede seleccionar especialidad, fecha y modalidad (presencial o videollamada), 
+                      recibiendo confirmación inmediata con registro automático en su historial.</p>
 
-                    <h2 style="color:#2c3e50; text-align: center;">🧰 Tecnologías utilizadas</h2>
+                      <h3>Arquitectura y Flujo de Funcionamiento</h3>
+                      <ol>
+                        <li>El paciente selecciona la especialidad médica deseada.</li>
+                        <li>El sistema consulta en <em>Firestore</em> los profesionales disponibles.</li>
+                        <li>Se elige fecha y hora en función de la disponibilidad en tiempo real.</li>
+                        <li>Se confirma la cita y se envía notificación automática (push/email).</li>
+                        <li>El evento queda registrado en el historial tanto del paciente como del médico.</li>
+                      </ol>
+                      <div class="image-container">
+                        <img src="images/minthy/agendamiento_minthy_project/diagrama_de_flujo_agendamiento.png" 
+                            alt="Diagrama de Flujo - Agendamiento" 
+                            style="max-width: 100%; height: auto; border-radius: 5px;">
+                      </div>
 
+                      <h3>Tecnologías Utilizadas</h3>
+                      <table style="border-collapse: collapse; margin: auto; text-align: center;">
+                        <tr>
+                          <th style="border: 1px solid #ccc; padding: 8px;">Componente</th>
+                          <th style="border: 1px solid #ccc; padding: 8px;">Tecnología</th>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Interfaz</td>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Ionic 7 + Angular 16</td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ccc; padding: 8px;">UI/UX</td>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Angular Material, ReactiveFormsModule, Ngx-Toastr</td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Autenticación</td>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Firebase Authentication</td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Base de Datos</td>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Firebase Firestore</td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Notificaciones</td>
+                          <td style="border: 1px solid #ccc; padding: 8px;">Firebase Cloud Messaging, EmailJS</td>
+                        </tr>
+                      </table>
 
-                    <h1 style="color:#34495e;">🔧 Interfaz: Ionic 7 + Angular 16</h3>
-                    <div style="text-align:center; margin: 20px 0;">
-                      <img src="images/minthy/agendamiento_minthy_project/ionic_angular_agendamiento_project.png" alt="Ionic Angular" style="max-width:20%; border-radius:10px;">
-                    </div>
-                    <ul>
-                      <li>Interfaz híbrida multiplataforma</li>
-                      <li>Componentes reutilizables con Angular Material</li>
-                      <li>Enrutamiento basado en roles (paciente / médico)</li>
-                    </ul>
+                      <h3>Características Técnicas Destacadas</h3>
+                      <ul>
+                        <li><strong>Control dinámico de disponibilidad:</strong> los médicos gestionan sus horarios y el sistema bloquea automáticamente las horas ocupadas.</li>
+                        <li><strong>Actualización en tiempo real:</strong> listeners activos en Firestore (<code>snapshotChanges()</code>) para reflejar cambios instantáneamente.</li>
+                        <li><strong>Integración con módulo de videollamadas:</strong> generación automática de enlace único para citas virtuales.</li>
+                        <li><strong>Prevención de conflictos:</strong> validación en backend que evita citas duplicadas o traslapadas.</li>
+                        <li><strong>Optimización UX:</strong> animaciones con Ionic Animations API y carga visual con ngx-spinner/mat-progress-bar.</li>
+                      </ul>
 
-                    <h1 style="color:#34495e;">🎨 Interfaz de usuario / experiencia de usuario</h3>
-                    <div style="text-align:center; margin: 20px 0;">
-                      <img src="images/minthy/agendamiento_minthy_project/ui_ux_agendamiento.jpg" alt="UI/UX" style="max-width:20%; border-radius:10px;">
-                    </div>
-                    <ul>
-                      <li>Formularios reactivos (ReactiveFormsModule) para validación en tiempo real</li>
-                      <li>Angular Material Datepicker para selección de fechas</li>
-                      <li>Ngx-Toastr para retroalimentación inmediata</li>
-                    </ul>
+                      <h3>Vista Previa de la Aplicación</h3>
+                      <video controls style="width: 100%; max-width: 500px; border-radius: 10px; display: block; margin: auto;">
+                        <source src="videos/proyecto4.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                      </video>
+                    `,
+                    additionalDescription: ``
+                  },
 
-                    <h1 style="color:#34495e;">🔐 Autenticación: Firebase Authentication</h3>
-                    <div style="text-align:center; margin: 20px 0;">
-                      <img src="images/minthy/agendamiento_minthy_project/auth_firebase_agendamiento_project.png" alt="Firebase Auth" style="max-width:20%; border-radius:10px;">
-                    </div>
-                    <ul>
-                      <li>Inicio de sesión con correo electrónico</li>
-                      <li>Almacenamiento seguro de tokens</li>
-                      <li>Validación del rol del usuario para mostrar solo opciones relevantes</li>
-                    </ul>
-
-                    <h1 style="color:#34495e;">📂 Base de datos: Firestore</h3>
-                    <div style="text-align:center; margin: 20px 0;">
-                      <img src="images/minthy/agendamiento_minthy_project/firebase_database.png" alt="Firestore" style="max-width:20%; border-radius:10px;">
-                    </div>
-                    <ul>
-                      <li>Estructura SQL organizada por colecciones</li>
-                      <li>Consultas en tiempo real con <code>snapshotChanges()</code></li>
-                    </ul>
-
-                    <h1 style="color:#34495e;">📨 Notificaciones</h3>
-                    <div style="text-align:center; margin: 20px 0;">
-                      <img src="images/minthy/agendamiento_minthy_project/notificacion_agendamiento.jpg" alt="Notificaciones" style="max-width:20%; border-radius:10px;">
-                    </div>
-                    <ul>
-                      <li>Uso de Firebase Cloud Messaging (FCM) (en pruebas)</li>
-                      <li>Envío de confirmación de cita al paciente y recordatorio 24h antes</li>
-                      <li>Opcional: integración con EmailJS para notificaciones por correo</li>
-                    </ul>
-
-                    <h1 style="color:#2c3e50;">⚙️ Funcionalidades técnicas destacadas</h1>
-                    <ul>
-                      <li><strong>Control de disponibilidad médica:</strong> los médicos pueden establecer sus horarios y días disponibles. El sistema bloquea automáticamente los espacios ya reservados para evitar conflictos.</li>
-                      <li><strong>Agendamiento dinámico en tiempo real:</strong> uso de Firestore con oyentes activos (valueChanges(), snapshotChanges()) para actualizar la disponibilidad al instante.</li>
-                      <li><strong>Integración con el módulo de videollamadas:</strong> si la cita es virtual, se genera un enlace único y se adjunta al momento de la confirmación.</li>
-                      <li><strong>Gestión de conflictos:</strong> validación en el backend que impide agendar dos citas para el mismo médico o paciente en horarios traslapados.</li>
-                      <li><strong>Experiencia centrada en el usuario:</strong>
-                        <ul>
-                          <li>- Animaciones con Ionic Animations API para transiciones suaves</li>
-                          <li>- Indicadores visuales de carga (ngx-spinner, mat-progress-bar)</li>
-                        </ul>
-                      </li>
-                    </ul>
-                                
-                    <h2 style="color:#2c3e50; text-align: center;">📱 Vista previa de la aplicación</h2>                  
-                    
-                  
-                  </p>
-                  `
-                },
 
                 proyecto5: {
                   title: "Automatización y Web Scraping para extracción de transacciones en el transporte urbano de Loja",
@@ -548,6 +548,216 @@ const nav = document.querySelector(".nav"),
                   
                 },
 
+                proyecto6: {
+
+                title: "Automatización Inteligente de Extracción y Análisis de Facturas con IA y Power BI",
+                thumbnail: "images/facturia/portada.png",
+                description: `
+                  <p>Este sistema automatiza la lectura de facturas PDF, extrae sus datos clave mediante inteligencia artificial, 
+                  los almacena en una base de datos SQLite y los visualiza en un tablero interactivo de
+                  Power BI, reduciendo el tiempo de procesamiento y errores humanos en la gestión contable.</p>
+                `,
+                
+                additionalDescription: `
+
+                  <h3 style="color:#2c3e50; font-size: 1.2em;">Objetivo del proyecto</h3>
+                  <div style="text-align:center; margin: 20px 0;">
+                    <img src="images/facturia/objetivo_facturia.png" alt="Ahorro de tiempo" style="max-width:30%; border-radius:10px;">
+                  </div>
+                  <ul style="text-align:left; margin-left:20px;">
+                    <li>▶<strong>  Reducir</strong> el tiempo invertido en el registro de facturas.</li>
+                    <li>▶<strong>  Minimizar</strong> errores humanos en la transcripción de datos.</li>
+                    <li>▶<strong>  Centralizar y visualizar</strong> la información de facturas para análisis rápido y toma de decisiones.</li>
+                  </ul>
+
+                  <h3 style="color:#2c3e50; font-size: 1.2em;">Flujo de uso</h3>
+                  <ul style="text-align:left; margin-left:20px;">
+                    <li>1. El usuario sube facturas en formato PDF a una carpeta.</li>
+                    <li>2. El sistema analiza cada factura usando IA (modelo de OpenAI) con un prompt especializado.</li>
+                    <li>3. Se extraen datos clave: fecha, proveedor, concepto, importe y moneda.</li>
+                    <li>4. Los datos se almacenan automáticamente en una base de datos SQLite.</li>
+                    <li>5. Power BI consume los datos para generar reportes interactivos y filtrables.</li>
+                  </ul>  
+
+                  <h3 style="color:#2c3e50; font-size: 1.2em;">Video demostrativo</h3>
+                  <p>El video a continuación muestra el uso de la herramienta de automatización para la extracción y análisis de facturas.</p>
+
+                  <div style="text-align: center;">
+                    <a href="https://youtu.be/TkPGdmKY57Q" target="_blank">
+                      <img src="images/facturia/portada.png" alt="Ver video demostrativo" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: 0.3s;">
+                    </a>
+                    <p style="font-weight: bold;">▶ Haz clic en la imagen para ver el video</p>
+                  </div>
+
+                  <h3 style="color:#2c3e50; font-size: 1.2em;">Arquitectura del sistema</h3>
+                  <div style="text-align:center; margin: 20px 0;">
+                    <img src="images/facturia/diagrama_facturia.png" alt="Diagrama de arquitectura de facturas" style="max-width:80%; border-radius:10px;">
+                  </div>
+                  <p style="text-align:left;">El sistema se compone de tres bloques principales:
+                    <li><strong>Entrada</strong> (facturas PDF) </li>
+                    <li><strong>Procesamiento IA</strong> (extracción con GPT-4o-mini y PyMuPDF), en donde se lee el PDF, se extraen los datos de la factura y se tienen los datos listos para su almacenamiento</li>
+                    <li><strong>Almacenamiento</strong> (base de datos SQLite)</li>
+                    <li><strong>Visualización</strong> (Power BI conectado directamente a la base de datos)</li>
+                    Esta arquitectura permite que cualquier factura subida sea procesada de forma rápida y consistente, 
+                    asegurando que los reportes en Power BI estén siempre actualizados y listos para su consulta.</p>
+                
+
+ 
+
+                  <h3>Tecnologías utilizadas</h3>
+                  <table style="width: 80%; max-width: 900px; margin: 0 auto; border-collapse: collapse; text-align: center;">
+                    <thead>
+                      <tr style="background-color: #2c3e50; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc;">Categoría</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Tecnología</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-code"></i> Lenguaje de programación</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Python 3.10</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-robot"></i> IA / PNL </td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">API de OpenAI (GPT-4o-mini)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-database"></i> Procesamiento de datos</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">	PyMuPDF</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-file-export"></i> Base de datos</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">SQLite</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-file-excel"></i> Visualización</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Power BI</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-gears"></i> Manipulación de datos </td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Pandas</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  `
+                },
+
+               proyecto7: {
+              title: "Módulo de Teleconsulta: Videollamada Médica",
+              thumbnail: "images/teleconsulta/portada.png", // Imagen de portada del proyecto
+              description: `
+                  <p>
+                  Este módulo forma parte de una plataforma de telemedicina diseñada para permitir a médicos y pacientes conectarse en tiempo real mediante videollamadas, garantizando una comunicación efectiva y segura. Su arquitectura se ha desarrollado con el objetivo de ser escalable, robusta y adaptable a diferentes entornos médicos, ofreciendo una experiencia de usuario optimizada en dispositivos móviles y de escritorio.
+                  </p>
+
+
+
+                  <h4>Objetivo del Módulo</h4>
+                  <p>
+                  El módulo de teleconsulta ha sido diseñado para cubrir las necesidades de atención médica a distancia, permitiendo la interacción visual y auditiva en tiempo real. Esto reduce la necesidad de desplazamientos, mejora la eficiencia de los profesionales de la salud y amplía el acceso a la atención médica, especialmente en zonas rurales o de difícil acceso.
+                  </p>
+
+                  <h4>Características Principales</h4>
+                  <ul>
+                      <li><strong>Interfaz de Usuario Dinámica:</strong> Pantallas diferenciadas para cada etapa del flujo: carga inicial, información de la cita, videollamada en vivo y mensajes de error en caso de problemas técnicos.</li>
+                      <li><strong>Integración con Jitsi Meet API:</strong> Uso de la API externa para incrustar la videollamada en un contenedor propio, empleando un servidor alternativo (8x8.vc) para mejorar la velocidad de conexión.</li>
+                      <li><strong>Gestión de Roles:</strong> Asignación automática de rol de moderador al médico, permitiéndole controlar la sala y gestionar la participación.</li>
+                      <li><strong>Seguridad y Estabilidad:</strong> Verificación previa de compatibilidad del navegador, manejo de estados de conexión y recuperación ante fallos.</li>
+                      <li><strong>Diseño Responsivo:</strong> Adaptación total a dispositivos móviles y escritorio mediante media queries y componentes flexibles.</li>
+                      <li><strong>Controles de Dispositivo:</strong> Funciones para activar o desactivar micrófono y cámara en tiempo real.</li>
+                      <li><strong>Finalización Segura de la Llamada:</strong> Confirmación antes de salir y liberación de recursos para evitar consumo innecesario.</li>
+                  </ul>
+
+                  <div class="imagen-proyecto">
+                      <img src="images/teleconsulta/captura1.png" alt="Pantalla de carga y verificación de compatibilidad" />
+                  </div>
+
+                <h4>Arquitectura del Módulo</h4>
+                <p>
+                La arquitectura del módulo de Teleconsulta está diseñada bajo un enfoque modular y desacoplado, lo que permite mantener una clara separación entre la lógica de negocio, la presentación de la interfaz y la comunicación en tiempo real. Esto facilita la escalabilidad, el mantenimiento y la integración con otros componentes de la plataforma de telemedicina.
+                </p>
+
+                <p>
+                El flujo general parte de la interfaz de usuario desarrollada en Ionic y Angular, que interactúa con servicios internos para gestionar estados, verificar compatibilidad y establecer la conexión con el servidor de videollamadas mediante la API de Jitsi Meet. 
+                </p>
+
+                <h4>Componentes principales:</h4>
+                <ul>
+                    <li><strong>Capa de Presentación (Frontend):</strong>  
+                        Implementada con Angular e Ionic. Contiene las pantallas de carga, información de la cita, videollamada y mensajes de error. Utiliza directivas y binding para renderizar contenido dinámicamente según el estado de la conexión.</li>
+                    
+                    <li><strong>Capa de Lógica y Control:</strong>  
+                        Gestiona los estados de la aplicación (cargando, en llamada, error), controla los roles de usuario (médico/paciente), maneja la activación/desactivación de dispositivos de audio y video, y procesa la finalización segura de la sesión.</li>
+                    
+                    <li><strong>Capa de Comunicación en Tiempo Real:</strong>  
+                        Integración con Jitsi Meet API a través de un servicio especializado. Se encarga de inicializar la conexión, configurar la sala de videollamada, aplicar roles y gestionar eventos en tiempo real.</li>
+                    
+                    <li><strong>Capa de Servicios y Utilidades:</strong>  
+                        Contiene funciones reutilizables como la verificación de compatibilidad del navegador, el manejo de rutas internas mediante Angular Router y la gestión de parámetros recibidos por URL.</li>
+                </ul>
+
+                <p>
+                A continuación, se puede adjuntar un diagrama de bloques que ilustre la relación entre estas capas, los flujos de datos y los eventos que ocurren desde que el usuario inicia sesión hasta que finaliza la videollamada.
+                </p>
+
+
+                  <div class="imagen-proyecto">
+                      <img src="images/teleconsulta/captura2.png" alt="Pantalla de información de la consulta" />
+                  </div>
+
+                  <h3>Flujo de Uso</h3>
+                  <ol>
+                      <li>El usuario accede al módulo y se verifica la compatibilidad del navegador.</li>
+                      <li>Se muestra una pantalla de carga con indicadores visuales del progreso.</li>
+                      <li>Antes de iniciar la videollamada, se presenta una tarjeta con los datos de la cita: nombre del médico, paciente, hora y ID de la sala.</li>
+                      <li>La videollamada se inicia en un contenedor dedicado, utilizando Jitsi Meet API.</li>
+                      <li>Durante la llamada, el usuario puede controlar micrófono y cámara.</li>
+                      <li>Al finalizar, se solicita confirmación y se liberan los recursos asociados.</li>
+                  </ol>
+
+                  <div class="imagen-proyecto">
+                      <img src="images/teleconsulta/captura3.png" alt="Videollamada en vivo con Jitsi Meet" />
+                  </div>
+
+                          <h3>Tecnologías utilizadas</h3>
+        <table style="width: 80%; max-width: 900px; margin: 0 auto; border-collapse: collapse; text-align: center;">
+            <thead>
+                <tr style="background-color: #2c3e50; color: white;">
+                    <th style="padding: 10px; border: 1px solid #ccc;">Categoría</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Tecnología</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-code"></i> Framework Frontend</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Angular, Ionic</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-terminal"></i> Lenguajes</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">TypeScript, HTML5, SCSS (Sass)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-video"></i> Comunicación en Tiempo Real</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Jitsi Meet API (Servidor alternativo 8x8.vc)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-palette"></i> UI/UX</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Componentes de Ionic (botones, tarjetas, íconos, alertas)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;"><i class="fa-solid fa-route"></i> Manejo de Estado y Rutas</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Angular Router, Services</td>
+                </tr>
+            </tbody>
+        </table>
+
+                  <h3>Demostración</h3>
+                  <p>[Video demostrativo del módulo en funcionamiento mostrando cada etapa del flujo]</p>
+              `
+          },
+
+
 
                 };
             
@@ -579,10 +789,21 @@ const nav = document.querySelector(".nav"),
                 document.getElementById("project-additional-description").innerHTML = project.additionalDescription; // Usar innerHTML
             
                 // Mostrar la sección de detalles del proyecto
-                document.getElementById("project-details").style.display = "block";
-              } else {
-                console.error("Proyecto no encontrado:", projectId);
-                // Mostrar un mensaje de error en la interfaz
+          const projectDetails = document.getElementById("project-details");
+          projectDetails.style.display = "flex";
+
+          // ⭐ SCROLL SUAVE hacia la sección de detalles ⭐
+          setTimeout(() => {
+              projectDetails.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+              });
+          }, 100);
+
+          } else {
+              console.error("Proyecto no encontrado:", projectId);
+                          
+    // Mostrar un mensaje de error en la interfaz
                 document.getElementById("project-details").innerHTML = `
                   <p style="color: red;">El proyecto seleccionado no se encuentra.</p>
                 `;

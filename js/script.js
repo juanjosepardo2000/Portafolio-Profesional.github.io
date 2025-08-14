@@ -451,8 +451,8 @@ const nav = document.querySelector(".nav"),
                       </ul>
 
                       <h3>Vista Previa de la Aplicación</h3>
-                      <video controls style="width: 100%; max-width: 500px; border-radius: 10px; display: block; margin: auto;">
-                        <source src="videos/proyecto4.mp4" type="video/mp4">
+                      <video controls style="width: 35%; max-width: 200px; border-radius: 10px; display: block; margin: auto;">
+                        <source src="images/minthy/agendamiento_minthy_project/agendamiento.mp4" type="video/mp4">
                         Tu navegador no soporta la etiqueta de video.
                       </video>
                     `,
@@ -583,7 +583,7 @@ const nav = document.querySelector(".nav"),
                   <p>El video a continuación muestra el uso de la herramienta de automatización para la extracción y análisis de facturas.</p>
 
                   <div style="text-align: center;">
-                    <a href="https://youtu.be/TkPGdmKY57Q" target="_blank">
+                    <a href="https://youtu.be/E-6dzBZIrUA" target="_blank">
                       <img src="images/facturia/portada.png" alt="Ver video demostrativo" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: 0.3s;">
                     </a>
                     <p style="font-weight: bold;">▶ Haz clic en la imagen para ver el video</p>
@@ -603,8 +603,7 @@ const nav = document.querySelector(".nav"),
                 
 
  
-
-                  <h3>Tecnologías utilizadas</h3>
+                  <h3 style="color:#2c3e50; font-size: 1.2em;">Tecnologías utilizadas</h3>
                   <table style="width: 80%; max-width: 900px; margin: 0 auto; border-collapse: collapse; text-align: center;">
                     <thead>
                       <tr style="background-color: #2c3e50; color: white;">
@@ -639,6 +638,22 @@ const nav = document.querySelector(".nav"),
                       </tr>
                     </tbody>
                   </table>
+
+                  <h3 style="color:#2c3e50; font-size: 1.2em; margin-top: 50px;">Visualización</h3>
+                  
+                  <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/facturia/visualizacion1.png" alt="Visualización 1" style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 15px; font-style: italic; color: #666; font-size: 0.95em;">
+                      Dashboard principal de Power BI mostrando el análisis consolidado de todas las facturas procesadas, incluyendo gráficos de tendencias y resúmenes por proveedor.
+                    </p>  
+                  </div>
+
+                  <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/facturia/visualizacion2.png" alt="Visualización 2" style="width: 100%; max-width: 600px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 15px; font-style: italic; color: #666; font-size: 0.95em;">
+                      Vista detallada de filtros interactivos que permiten analizar las facturas por fecha, proveedor, rango de importes y moneda, facilitando la toma de decisiones empresariales.
+                    </p>
+                  </div>
 
                   `
                 },
